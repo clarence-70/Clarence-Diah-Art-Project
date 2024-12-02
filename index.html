@@ -1,0 +1,268 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+     integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+   <style>
+body {  
+    font-family: Arial, sans-serif;  
+    margin: 0;  
+    padding: 0;  
+}  
+
+header {  
+    background-color: #333;  
+    color: #fff;  
+    padding: 10px 0;  
+    text-align: center;  
+} 
+/* profile section */
+#photo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem o;
+}
+#photo{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid#333;
+    box-shadow: 0 4px 6px rgba( O, O, O, 0. 1 );
+
+}
+#profile h2{
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    color: #333;
+
+}
+#profile p {
+    font-size: 1rem;
+    color: #666;
+
+}
+
+nav ul {  
+    list-style-type: none;  
+    padding: 0;  
+}  
+
+nav ul li {  
+    display: inline;  
+    margin: 0 15px;  
+
+}   
+
+nav a {  
+    color: white;  
+    text-decoration: none;  
+}  
+
+main {  
+    padding: 20px;  
+}  
+
+footer {  
+    text-align: center;  
+    padding: 10px;  
+    background-color: #333;  
+    color: white; 
+
+
+}  
+
+.icon a{
+    text-decoration: none;
+    color: #007BFF;
+} 
+
+.icon ion-icon{
+    color: #007BFF;
+    font-size: 40px;
+    padding-left: 15px;
+    padding-top: 10px;
+
+
+}
+.c-iconc ion-icon {
+    color:white;
+    font-size: 30px;
+    padding-left: 15px;
+    padding-top: 10px;
+}
+.projects-grid {  
+    display: grid;  
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));  
+    gap: 20px; /* Space between each card */  
+    padding: 20px;  
+    margin: 0 auto; /* Center the grid */  
+}  
+
+.project-card {  
+    border: 1px solid #ccc; /* Card border */  
+    border-radius: 5px; /* Rounded corners */  
+    overflow: hidden; /* Clipping */  
+    text-align: center; /* Center text */  
+    background-color: #fff; /* Background color */  
+    transition: transform 0.3s; /* Animation for hover effect */  
+}  
+
+.project-card img {  
+    width: 100%; /* Make image responsive */  
+    height: auto; /* Maintain aspect ratio */  
+}  
+
+.project-card h3 {  
+    margin: 10px 0; /* Margin around title */  
+}  
+
+.project-card p {  
+    padding: 0 10px; /* Padding for description */  
+}  
+
+.project-card a {  
+    display: block; /* Make the link block-level */  
+    margin: 10px; /* Spacing around the link */  
+    padding: 10px; /* Padding for the link */  
+    background-color: #007BFF; /* Background color */  
+    color: #fff; /* Text color */  
+    text-decoration: none; /* Remove underline */  
+    border-radius: 5px; /* Rounded corners */  
+}  
+.project-card:hover {
+    transform: scale(1.05); /* Scale up on hover */ 
+} 
+
+.modal {  
+    display: none;   
+    position: fixed;   
+    z-index: 1;   
+    left: 0;  
+    top: 0;  
+    width: 100%;   
+    height: 100%;   
+    overflow: auto;   
+    background-color: rgb(0,0,0);   
+    background-color: rgba(0,0,0,0.4);   
+    padding-top: 60px;   
+}  
+
+.modal-content {  
+    background-color: #fefefe;  
+    margin: 5% auto;   
+    padding: 20px;  
+    border: 1px solid #888;  
+    width: 80%;   
+}  
+
+.close {  
+    color: #aaa;  
+    float: right;  
+    font-size: 28px;  
+    font-weight: bold;  
+}  
+
+.close:hover,  
+.close:focus {  
+    color: black;  
+    text-decoration: none;  
+    cursor: pointer;  
+}
+
+   </style> 
+</head>  
+<body>  
+
+<header>  
+    <h1>My Portfolio</h1>  
+    <nav>  
+        <ul>  
+            <li><a href="index.html">Home</a></li>  
+            <li><a href="about.html">About Me</a></li>  
+            <li><a href="contact.html">Contact</a></li>  
+        </ul>  
+    </nav>  
+</header>  
+
+<main>  
+    <section>  
+        <h2>Welcome to My Portfolio</h2>  
+        <img src="picture.jpg.jpg" alt="Your Photo" id="photo">
+        
+        <h2>My Projects</h2>  
+        <div class="projects-grid">  
+            <div class="project-card">  
+                <img src="project1.jpg" alt="Project 1">  
+                <h3>Project Title 1</h3>  
+                <p>Brief description of Project 1...</p>  
+                <a href="https://link-to-your-project1.com" target="_blank">View Project</a>  
+            </div>  
+            <div class="project-card">  
+                <img src="project2.jpg" alt="Project 2">  
+                <h3>Project Title 2</h3>  
+                <p>Brief description of Project 2...</p>  
+                <a href="https://link-to-your-project2.com" target="_blank">View Project</a>  
+            </div>  
+            <div class="project-card">  
+                <img src="project3.jpg" alt="Project 3">  
+                <h3>Project Title 3</h3>  
+                <p>Brief description of Project 3...</p>  
+                <a href="https://link-to-your-project3.com" target="_blank">View Project</a>  
+            </div>  
+            <div class="project-card">  
+                <img src="project4.jpg" alt="Project 4">  
+                <h3>Project Title 4</h3>  
+                <p>Brief description of Project 4...</p>  
+                <a href="https://link-to-your-project4.com" target="_blank">View Project</a> 
+            </div>
+    </section>  
+</main>  
+
+<footer>
+    
+    <div class="icons">
+        <i class="fa-brands fa-whatsapp"></i>
+        <i class="fa-brands fa-github"></i>
+        <i class="fa-brands fa-linkedin"></i>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-facebook-messenger"></i>
+    </div>
+    <p>&copy; Clarence J. Diah, Jr  Portfolio</p>
+    
+    
+</footer>  
+
+<div id="modal" class="modal">  
+    <div class="modal-content">  
+        <span class="close">&times;</span>  
+        <p>More information about me...<br>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione ea iusto assumenda, quis quos at laboriosam ipsum omnis dolore? Architecto eum nam mollitia voluptas, blanditiis totam corporis voluptates reprehenderit illum. </p>  
+    </div>  
+</div>  
+<script>
+    // Modal for photo information  
+const photo = document.getElementById('photo');  
+const modal = document.getElementById('modal');  
+const span = document.getElementsByClassName('close')[0];  
+
+photo.onclick = function() {  
+    modal.style.display = "block";  
+}  
+
+span.onclick = function() {  
+    modal.style.display = "none";  
+}  
+
+window.onclick = function(event) {  
+    if (event.target === modal) {  
+        modal.style.display = "none";  
+    }  
+}  
+
+</script>  
+
+</body>  
+</html>
